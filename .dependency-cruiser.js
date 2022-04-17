@@ -158,7 +158,7 @@ module.exports = {
         'section of your package.json. If this module is development only - add it to the ' +
         'from.pathNot re of the not-to-dev-dep rule in the dependency-cruiser configuration',
       from: {
-        path: '^(dist)',
+        path: '^(src)',
         pathNot: '\\.(spec|test)\\.(js|mjs|cjs|ts|ls|coffee|litcoffee|coffee\\.md)$'
       },
       to: {
@@ -412,4 +412,4 @@ module.exports = {
     }
   }
 };
-// generated: dependency-cruiser@11.4.1 on 2022-04-06T08:40:04.671Z
+// generated: dependency-cruiser@11.4.1 on 2022-04-17T18:43:31.572Z
