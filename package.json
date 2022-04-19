@@ -21,13 +21,20 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "dependency-graph": "nest build && depcruise --exclude '^node_modules' '*.ts' --output-type dot dist | dot -T svg > dependencygraph.svg",
     "dependency-report": "depcruise --config .dependency-cruiser.js dist",
-    "dependency-init": "depcruise --init"
+    "dependency-init": "depcruise --init",
+    "prisma:dev:deploy": "prisma migrate deploy",
+    "db:dev:remove": "docker compose rm dev-db -s -f -v",
+    "db:dev:up": "docker compose up dev-db -d",
+    "db:dev:restart": "npm run db:dev:remove && npm run db:dev:up && sleep 2 && npm run prisma:dev:deploy"
   },
-  "dependencies": { 
+  "dependencies": {
     "@nestjs/common": "^8.0.0",
     "@nestjs/core": "^8.0.0",
     "@nestjs/platform-express": "^8.0.0",
     "@prisma/client": "^3.12.0",
+    "argon2": "^0.28.5",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.13.2",
     "prisma": "^3.12.0",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",

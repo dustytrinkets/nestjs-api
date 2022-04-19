@@ -36,8 +36,12 @@ $ npm run test:cov
 
 ## Run Prisma Studio
 
+```
 $ npx prisma studio
+```
 
 ## Create Dependency Graph
 
+```
 $ npm run dependency-graph
+```
